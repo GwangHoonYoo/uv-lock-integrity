@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "uv-lock-integrity"
+version = "0.1.0"
+description = "Read-only offline checks for declared version contradictions in uv.lock"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+dependencies = ["packaging>=24.2,<27"]
+
+[project.scripts]
+uv-lock-integrity = "uv_lock_integrity.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
