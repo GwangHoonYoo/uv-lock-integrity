@@ -73,7 +73,8 @@ def audit(project, env=None):
               'target_environment': {}, 'scope': 'root and workspace direct production version constraints',
               'findings': [], 'checks': [], 'unexamined': [
                   'transitive dependency constraints', 'optional dependencies/extras',
-                  'dependency groups', 'artifact contents, hashes and authenticity',
+                  'dependency groups', 'wheel availability', 'build and runtime compatibility',
+                  'artifact contents, hashes and authenticity',
                   'vulnerabilities', 'other target environments'], 'errors': []}
     root = Path(project).resolve()
 

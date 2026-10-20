@@ -47,6 +47,8 @@ class AuditTests(unittest.TestCase):
         r = self.run_audit()
         self.assertEqual(r['exit_code'], 0)
         self.assertIn('dependency groups', r['unexamined'])
+        self.assertIn('wheel availability', r['unexamined'])
+        self.assertIn('build and runtime compatibility', r['unexamined'])
 
     def test_wrong_exact_pin(self):
         self.replace('pyproject.toml','numpy!=2.2.5','numpy==2.1.0')
